@@ -32,7 +32,7 @@ public class Theatre3 extends CreateTheatre{
 
     private  Screen _initScreen(String name){
         Screen screen = new Screen(
-                name, _initSeatRows());
+                name, _initSeatRows(), createShows());
         return screen;
     }
 

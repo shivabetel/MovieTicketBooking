@@ -3,6 +3,7 @@ package com.ssorg.booking.mockdatafactory;
 import com.ssorg.booking.model.*;
 
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 public abstract class CreateTheatre {
@@ -22,5 +23,13 @@ public abstract class CreateTheatre {
 
     protected List<Seat> createSeats(){
         return Collections.emptyList();
+    }
+
+    protected List<Show> createShows() {
+        return List.of(
+                new Show(new Date(), "10:30 AM"),
+                new Show(new Date(), "1:30 PM"),
+                new Show(new Date(), "4:30 PM"),
+                new Show(new Date(), "9:30 PM"));
     }
 }

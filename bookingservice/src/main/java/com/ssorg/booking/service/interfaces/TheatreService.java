@@ -16,4 +16,6 @@ public interface TheatreService {
 
     List<Theatre> getTheatreByMovie(String movieId);
 
+    void reserveSeat(String theatreId, String screenId, String showId, List<String> seatRows, List<String> seatIds, String user);
+
 }

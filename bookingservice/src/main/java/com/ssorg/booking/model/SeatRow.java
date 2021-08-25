@@ -13,4 +13,12 @@ public class SeatRow {
         this.seats = seats;
         id = UUID.randomUUID().toString();
     }
+
+    public List<Seat> getSeats() {
+        return seats;
+    }
+
+    public String getId() {
+        return id;
+    }
 }

@@ -1,10 +1,8 @@
 package com.ssorg.booking.mockdatafactory;
 
-import com.ssorg.booking.model.Movie;
-import com.ssorg.booking.model.Screen;
-import com.ssorg.booking.model.Seat;
-import com.ssorg.booking.model.SeatRow;
+import com.ssorg.booking.model.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -33,9 +31,11 @@ public class Theatre1 extends CreateTheatre{
     private  Screen _initScreen(String name){
         Screen screen = new Screen(
                 name,
-                _initSeatRows());
+                _initSeatRows(),
+                createShows());
         return screen;
     }
+
 
     private  List<SeatRow> _initSeatRows(){
         return Stream.of("A","B","C","D","E","F","G","H","I","J","K","L")
